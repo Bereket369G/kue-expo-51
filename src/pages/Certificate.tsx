@@ -1,12 +1,15 @@
+
 import { ArrowLeft, Download } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { BottomNav } from "@/components/schedule/BottomNav";
 import { useEffect, useState } from "react";
+
 const Certificate = () => {
   const navigate = useNavigate();
   const [timeLeft, setTimeLeft] = useState(30000);
   const [progress, setProgress] = useState(100);
+
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(prev => {
@@ -19,14 +22,16 @@ const Certificate = () => {
     }, 1000);
     return () => clearInterval(timer);
   }, []);
+
   useEffect(() => {
     setProgress(timeLeft / 30000 * 100);
   }, [timeLeft]);
+
   const formatTime = (seconds: number) => {
     // Add 3 hours to convert to Ethiopian time
     const ethiopianSeconds = seconds + 3 * 3600;
     const hours = Math.floor(ethiopianSeconds / 3600);
-    const minutes = Math.floor(ethiopianSeconds % 3600 / 60);
+    const minutes = Math.floor((ethiopianSeconds % 3600) / 60);
     const remainingSeconds = ethiopianSeconds % 60;
     const ampm = hours >= 12 ? 'PM' : 'AM';
     const displayHours = hours % 12 || 12;
@@ -35,10 +40,9 @@ const Certificate = () => {
       ampm
     };
   };
-  const {
-    time,
-    ampm
-  } = formatTime(timeLeft);
+
+  const { time, ampm } = formatTime(timeLeft);
+
   return <div className="min-h-screen bg-white pb-20">
       <header className="px-6 py-3 flex items-center gap-4">
         <button onClick={() => navigate(-1)} className="p-1.5">
@@ -111,4 +115,5 @@ const Certificate = () => {
       <BottomNav />
     </div>;
 };
+
 export default Certificate;
