@@ -44,7 +44,7 @@ export const FeaturedSessionsSection = ({
         />
         <EventCard
           type="Public Session"
-          title="AI in Governance"
+          title="AI in Athletics"
           time="02:00 PM"
           location="Innovation Hub"
           startsIn="Starts in 5 hours"

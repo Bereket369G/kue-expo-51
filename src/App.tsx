@@ -10,6 +10,10 @@ import Registration from "./pages/Registration";
 import Schedule from "./pages/Schedule";
 import Events from "./pages/Events";
 import EventDetails from "./pages/EventDetails";
+import OpeningCeremony from "./pages/events/OpeningCeremony";
+import TechPolicy from "./pages/events/TechPolicy";
+import AIGovernance from "./pages/events/AIGovernance";
+import DigitalPolicy from "./pages/events/DigitalPolicy";
 import Certificate from "./pages/Certificate";
 import NotFound from "./pages/NotFound";
 import LoadingScreen from "./components/common/LoadingScreen";
@@ -23,7 +27,7 @@ const RoutesWithTransition = () => {
     setIsLoading(true);
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1000); // Show loading for 1 second
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [location.pathname]);
@@ -38,6 +42,10 @@ const RoutesWithTransition = () => {
       <Route path="/registration" element={<Registration />} />
       <Route path="/schedule" element={<Schedule />} />
       <Route path="/events" element={<Events />} />
+      <Route path="/events/opening-ceremony" element={<OpeningCeremony />} />
+      <Route path="/events/tech-policy" element={<TechPolicy />} />
+      <Route path="/events/ai-governance" element={<AIGovernance />} />
+      <Route path="/events/digital-policy" element={<DigitalPolicy />} />
       <Route path="/events/:id" element={<EventDetails />} />
       <Route path="/certificate" element={<Certificate />} />
       <Route path="*" element={<NotFound />} />
