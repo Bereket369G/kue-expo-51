@@ -79,9 +79,9 @@ const Events = () => {
           <h2 className="text-3xl font-medium mb-6">Featured Speakers</h2>
           <div 
             ref={speakersRef}
-            className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar relative"
+            className="flex overflow-x-auto gap-4 pb-4 hide-scrollbar relative"
           >
-            <div className="snap-start shrink-0 w-full">
+            <div className="flex-none w-[calc(100%-3rem)]">
               <SpeakerCard
                 image="/lovable-uploads/0ac720e3-5aee-45de-8866-44642f6feeff.png"
                 name="H.E. Dr. John Doe"
@@ -90,7 +90,7 @@ const Events = () => {
                 onClick={() => navigate("/speakers/john-doe")}
               />
             </div>
-            <div className="snap-start shrink-0 w-full">
+            <div className="flex-none w-[calc(100%-3rem)]">
               <SpeakerCard
                 image="/lovable-uploads/0ac720e3-5aee-45de-8866-44642f6feeff.png"
                 name="Dr. Sarah Johnson"
@@ -99,7 +99,7 @@ const Events = () => {
                 onClick={() => navigate("/speakers/sarah-johnson")}
               />
             </div>
-            <div className="snap-start shrink-0 w-full">
+            <div className="flex-none w-[calc(100%-3rem)]">
               <SpeakerCard
                 image="/lovable-uploads/0ac720e3-5aee-45de-8866-44642f6feeff.png"
                 name="Prof. Michael Chang"
