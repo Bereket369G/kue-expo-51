@@ -3,8 +3,11 @@ import { EventCard } from "@/components/events/EventCard";
 import { SpeakerCard } from "@/components/events/SpeakerCard";
 import { ShowcaseCard } from "@/components/events/ShowcaseCard";
 import { BottomNav } from "@/components/schedule/BottomNav";
+import { useNavigate } from "react-router-dom";
 
 const Events = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-[#F8F9FB] pb-24">
       <div className="px-6 py-8">
@@ -19,7 +22,7 @@ const Events = () => {
             location="Grand Hall"
             startsIn="Starts in 2 hours"
             typeStyle="public"
-            onClick={() => console.log("Navigate to event details")}
+            onClick={() => navigate("/events/opening-ceremony")}
           />
           <EventCard
             type="Restricted Access"
@@ -28,7 +31,7 @@ const Events = () => {
             location="Executive Room"
             accessRequired="Delegate Access Required"
             typeStyle="restricted"
-            onClick={() => console.log("Navigate to event details")}
+            onClick={() => navigate("/events/tech-policy")}
           />
         </section>
 
@@ -39,7 +42,7 @@ const Events = () => {
             name="H.E. Dr. John Doe"
             title="Minister of Tech Policy"
             role="Keynote Speaker"
-            onClick={() => console.log("Navigate to speaker details")}
+            onClick={() => navigate("/speakers/john-doe")}
           />
         </section>
 
