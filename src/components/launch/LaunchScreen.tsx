@@ -8,7 +8,7 @@ export const LaunchScreen = () => {
   };
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-white p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white p-6">
       <div className="bg-white shadow-[0px_3px_6px_rgba(18,15,40,0.12)] max-w-[480px] w-full overflow-hidden text-base text-[#010101] font-normal">
         <section className="bg-[rgba(18,23,122,1)] flex w-full flex-col items-center pt-[27px] pb-12 px-5">
           <TimeDisplay />
@@ -33,6 +33,6 @@ export const LaunchScreen = () => {
           </div>
         </section>
       </div>
-    </main>
+    </div>
   );
 };
