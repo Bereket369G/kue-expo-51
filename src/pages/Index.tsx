@@ -3,7 +3,7 @@ import { LaunchScreen } from "@/components/launch/LaunchScreen";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="h-screen w-full bg-white overflow-hidden">
       <LaunchScreen />
     </div>
   );
