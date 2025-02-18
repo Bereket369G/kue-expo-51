@@ -3,8 +3,10 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { User, Phone } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const RegistrationForm = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -14,6 +16,7 @@ export const RegistrationForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Starting tour with data:", formData);
+    navigate("/schedule");
   };
 
   return (
