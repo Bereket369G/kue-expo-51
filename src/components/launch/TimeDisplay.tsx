@@ -1,6 +1,9 @@
+
 import { useEffect, useState } from "react";
+
 export const TimeDisplay = () => {
   const [currentTime, setCurrentTime] = useState<string>("");
+
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
@@ -15,9 +18,15 @@ export const TimeDisplay = () => {
       };
       setCurrentTime(now.toLocaleDateString("en-US", options).replace(",", ""));
     };
+
     updateTime();
     const interval = setInterval(updateTime, 1000);
     return () => clearInterval(interval);
   }, []);
-  return;
+
+  return (
+    <div className="text-lg font-medium text-white/90">
+      {currentTime}
+    </div>
+  );
 };
