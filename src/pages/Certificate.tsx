@@ -97,7 +97,7 @@ const Certificate = () => {
           <div className="text-center space-y-2">
             <h3 className="text-[#C25B3F] text-xl font-medium">Innovation & Policy</h3>
             <h4 className="text-[#C25B3F] text-xl font-medium">Leadership Award</h4>
-            <p className="text-lg text-gray-600">John Anderson</p>
+            <p className="text-lg text-gray-600">GIS 2025</p>
             <p className="text-sm text-gray-500">February 27, 2025</p>
           </div>
         </div>
