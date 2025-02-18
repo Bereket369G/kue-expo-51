@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
-
 export const TimeDisplay = () => {
   const [currentTime, setCurrentTime] = useState<string>("");
-
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
@@ -13,24 +11,13 @@ export const TimeDisplay = () => {
         hour: "2-digit",
         minute: "2-digit",
         second: "2-digit",
-        hour12: false,
+        hour12: false
       };
       setCurrentTime(now.toLocaleDateString("en-US", options).replace(",", ""));
     };
-
     updateTime();
     const interval = setInterval(updateTime, 1000);
-
     return () => clearInterval(interval);
   }, []);
-
-  return (
-    <time
-      dateTime={new Date().toISOString()}
-      className="text-white leading-loose"
-      aria-label="Current date and time"
-    >
-      {currentTime}
-    </time>
-  );
+  return;
 };
