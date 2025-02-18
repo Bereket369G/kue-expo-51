@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 const Certificate = () => {
   const navigate = useNavigate();
-  const [timeLeft, setTimeLeft] = useState(30000); // 8 hours, 22 minutes, 28 seconds in seconds
+  const [timeLeft, setTimeLeft] = useState(30000);
   const [progress, setProgress] = useState(100);
 
   useEffect(() => {
@@ -29,11 +29,20 @@ const Certificate = () => {
   }, [timeLeft]);
 
   const formatTime = (seconds: number) => {
-    const hours = Math.floor(seconds / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
-    const remainingSeconds = seconds % 60;
-    return `${hours}:${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+    // Add 3 hours to convert to Ethiopian time
+    const ethiopianSeconds = seconds + (3 * 3600);
+    const hours = Math.floor(ethiopianSeconds / 3600);
+    const minutes = Math.floor((ethiopianSeconds % 3600) / 60);
+    const remainingSeconds = ethiopianSeconds % 60;
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    const displayHours = hours % 12 || 12;
+    return {
+      time: `${displayHours}:${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`,
+      ampm
+    };
   };
+
+  const { time, ampm } = formatTime(timeLeft);
 
   return (
     <div className="min-h-screen bg-white pb-20">
@@ -66,7 +75,8 @@ const Certificate = () => {
             />
           </svg>
           <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-center bg-[#9b87f5] rounded-full shadow-lg">
-            <span className="text-4xl font-bold mb-2 text-white">{formatTime(timeLeft)}</span>
+            <span className="text-4xl font-bold mb-1 text-white">{time}</span>
+            <span className="text-sm mb-1 text-white">{ampm}</span>
             <span className="text-base mb-1 text-white">Hours : Minutes : Seconds</span>
             <span className="text-sm opacity-80 text-white">Until Your Certificate Unlocks</span>
           </div>

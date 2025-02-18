@@ -1,4 +1,3 @@
-
 import { ArrowLeft, Bell, ShieldCheck } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -71,13 +70,7 @@ const EventDetails = () => {
         {/* Description Section */}
         <div className="space-y-4 text-gray-600">
           <p>
-            Join us for an extraordinary gathering of global leaders, innovators, and changemakers at the Global Leadership & Innovation Summit 2025. This premier event brings together the brightest minds from government, industry, and academia to shape the future of sustainable development and technological advancement.
-          </p>
-          <p>
-            Through engaging panel discussions, keynote speeches, and interactive workshops, participants will explore cutting-edge solutions to today's most pressing challenges while fostering meaningful partnerships for tomorrow's opportunities.
-          </p>
-          <p>
-            Don't miss this unique opportunity to be part of a transformative dialogue that will influence policy-making and innovation strategies for years to come.
+            Join global leaders, innovators, and experts at the Global Leadership & Innovation Summit 2025. Explore sustainable development, technological advancement, and policy-making through interactive sessions and networking opportunities.
           </p>
         </div>
       </div>
