@@ -1,18 +1,15 @@
-
 import { ArrowLeft, Download } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { BottomNav } from "@/components/schedule/BottomNav";
 import { useEffect, useState } from "react";
-
 const Certificate = () => {
   const navigate = useNavigate();
   const [timeLeft, setTimeLeft] = useState(30000);
   const [progress, setProgress] = useState(100);
-
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft((prev) => {
+      setTimeLeft(prev => {
         if (prev <= 0) {
           clearInterval(timer);
           return 0;
@@ -20,19 +17,16 @@ const Certificate = () => {
         return prev - 1;
       });
     }, 1000);
-
     return () => clearInterval(timer);
   }, []);
-
   useEffect(() => {
-    setProgress((timeLeft / 30000) * 100);
+    setProgress(timeLeft / 30000 * 100);
   }, [timeLeft]);
-
   const formatTime = (seconds: number) => {
     // Add 3 hours to convert to Ethiopian time
-    const ethiopianSeconds = seconds + (3 * 3600);
+    const ethiopianSeconds = seconds + 3 * 3600;
     const hours = Math.floor(ethiopianSeconds / 3600);
-    const minutes = Math.floor((ethiopianSeconds % 3600) / 60);
+    const minutes = Math.floor(ethiopianSeconds % 3600 / 60);
     const remainingSeconds = ethiopianSeconds % 60;
     const ampm = hours >= 12 ? 'PM' : 'AM';
     const displayHours = hours % 12 || 12;
@@ -41,11 +35,11 @@ const Certificate = () => {
       ampm
     };
   };
-
-  const { time, ampm } = formatTime(timeLeft);
-
-  return (
-    <div className="min-h-screen bg-white pb-20">
+  const {
+    time,
+    ampm
+  } = formatTime(timeLeft);
+  return <div className="min-h-screen bg-white pb-20">
       <header className="px-6 py-3 flex items-center gap-4">
         <button onClick={() => navigate(-1)} className="p-1.5">
           <ArrowLeft className="w-5 h-5" />
@@ -56,28 +50,15 @@ const Certificate = () => {
       <div className="px-6 py-4 flex justify-center">
         <div className="relative w-60 h-60">
           <svg className="w-60 h-60 transform -rotate-90">
-            <circle
-              cx="120"
-              cy="120"
-              r="112"
-              className="stroke-[#e0d5ff] fill-none stroke-[8]"
-            />
-            <circle
-              cx="120"
-              cy="120"
-              r="112"
-              className="stroke-[#9b87f5] fill-none stroke-[8]"
-              strokeDasharray={`${2 * Math.PI * 112}`}
-              strokeDashoffset={`${2 * Math.PI * 112 * (1 - progress / 100)}`}
-              style={{
-                transition: 'stroke-dashoffset 1s ease-in-out',
-              }}
-            />
+            <circle cx="120" cy="120" r="112" className="stroke-[#e0d5ff] fill-none stroke-[8]" />
+            <circle cx="120" cy="120" r="112" className="stroke-[#9b87f5] fill-none stroke-[8]" strokeDasharray={`${2 * Math.PI * 112}`} strokeDashoffset={`${2 * Math.PI * 112 * (1 - progress / 100)}`} style={{
+            transition: 'stroke-dashoffset 1s ease-in-out'
+          }} />
           </svg>
           <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-center bg-[#9b87f5] rounded-full shadow-lg">
             <span className="text-4xl font-bold mb-1 text-white">{time}</span>
             <span className="text-sm mb-1 text-white">{ampm}</span>
-            <span className="text-base mb-1 text-white">Hours : Minutes : Seconds</span>
+            <span className="mb-1 text-white text-xs">Hours : Minutes : Seconds</span>
             <span className="text-sm opacity-80 text-white">Until Your Certificate Unlocks</span>
           </div>
         </div>
@@ -128,8 +109,6 @@ const Certificate = () => {
       </div>
 
       <BottomNav />
-    </div>
-  );
+    </div>;
 };
-
 export default Certificate;
