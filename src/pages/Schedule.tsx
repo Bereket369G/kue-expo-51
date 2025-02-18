@@ -6,13 +6,13 @@ import { BottomNav } from "@/components/schedule/BottomNav";
 
 const Schedule = () => {
   return (
-    <div className="pb-20">
+    <div className="min-h-screen bg-gray-50 pb-20">
       <ScheduleHeader />
       
-      <div className="px-6 py-8">
-        <h2 className="text-3xl font-bold mb-6">Program Schedule</h2>
+      <div className="container mx-auto max-w-4xl px-6 py-8">
+        <h2 className="text-3xl font-bold mb-6 text-gray-900">Program Schedule</h2>
         
-        <div className="space-y-6">
+        <div className="space-y-4">
           <ScheduleItem
             time="09:00 AM"
             title="Opening Ceremony: Future of Innovation"
@@ -34,10 +34,10 @@ const Schedule = () => {
         </div>
       </div>
 
-      <div className="px-6 py-8">
+      <div className="container mx-auto max-w-4xl px-6 py-8">
         <h2 className="text-3xl font-bold text-[#1A1F7C] mb-6">Distinguished Guests</h2>
         
-        <div className="space-y-6">
+        <div className="space-y-4">
           <GuestCard
             image="/placeholder.svg"
             name="H.E. Dr. Elena Torres"
