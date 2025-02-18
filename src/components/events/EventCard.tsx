@@ -23,7 +23,10 @@ export const EventCard = ({
   onClick,
 }: EventCardProps) => {
   return (
-    <div className="bg-white rounded-lg p-6 shadow-sm relative mb-4">
+    <div
+      onClick={onClick}
+      className="bg-white rounded-lg p-6 shadow-sm relative mb-4 cursor-pointer transition-all duration-300 hover:shadow-md animate-floating"
+    >
       <span
         className={`inline-block px-3 py-1 rounded-full text-sm mb-4 ${
           typeStyle === "public"
@@ -60,15 +63,6 @@ export const EventCard = ({
           </svg>
           {accessRequired}
         </div>
-      )}
-
-      {onClick && (
-        <button
-          onClick={onClick}
-          className="absolute right-4 bottom-4 w-12 h-12 bg-[#1A1F7C] rounded-full flex items-center justify-center text-white"
-        >
-          <ArrowRight className="w-6 h-6" />
-        </button>
       )}
     </div>
   );
