@@ -9,6 +9,7 @@ import Registration from "./pages/Registration";
 import Schedule from "./pages/Schedule";
 import Events from "./pages/Events";
 import EventDetails from "./pages/EventDetails";
+import Certificate from "./pages/Certificate";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/events" element={<Events />} />
           <Route path="/events/:id" element={<EventDetails />} />
+          <Route path="/certificate" element={<Certificate />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
