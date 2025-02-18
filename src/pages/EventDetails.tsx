@@ -1,4 +1,4 @@
-import { ArrowLeft, Bell, ShieldCheck } from "lucide-react";
+import { ArrowLeft, ShieldCheck } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const EventDetails = () => {
@@ -6,17 +6,12 @@ const EventDetails = () => {
 
   return (
     <div className="min-h-screen bg-[#1A1F7C] text-white">
-      {/* Header */}
       <header className="relative h-16 flex items-center justify-between px-6">
-        <button
-          onClick={() => navigate(-1)}
-          className="p-2"
-        >
+        <button onClick={() => navigate(-1)} className="p-2">
           <ArrowLeft className="w-6 h-6" />
         </button>
         <div className="flex gap-4">
           <ShieldCheck className="w-6 h-6" />
-          <Bell className="w-6 h-6" />
         </div>
       </header>
 

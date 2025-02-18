@@ -56,7 +56,7 @@ export const FeaturedSessionsSection = ({
           title="Future of Digital Policy"
           time="04:30 PM"
           location="Main Theatre"
-          startsIn="Starts in 7 hours"
+          startsIn="Starts in 8 hours"
           typeStyle="public"
           onClick={() => navigate("/events/digital-policy")}
         />

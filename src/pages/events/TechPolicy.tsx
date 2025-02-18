@@ -1,5 +1,4 @@
-
-import { ArrowLeft, Bell, ShieldCheck } from "lucide-react";
+import { ArrowLeft, ShieldCheck } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const TechPolicy = () => {
@@ -13,7 +12,6 @@ const TechPolicy = () => {
         </button>
         <div className="flex gap-4">
           <ShieldCheck className="w-6 h-6" />
-          <Bell className="w-6 h-6" />
         </div>
       </header>
 
