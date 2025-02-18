@@ -4,13 +4,73 @@ import { ShowcaseCard } from "@/components/events/ShowcaseCard";
 import { BottomNav } from "@/components/schedule/BottomNav";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Events = () => {
   const navigate = useNavigate();
   const scrollRef = useRef<HTMLDivElement>(null);
   const speakersRef = useRef<HTMLDivElement>(null);
   const showcaseRef = useRef<HTMLDivElement>(null);
+
+  const [showFeaturedArrow, setShowFeaturedArrow] = useState(true);
+  const [showSpeakersArrow, setShowSpeakersArrow] = useState(true);
+  const [showShowcaseArrow, setShowShowcaseArrow] = useState(true);
+
+  const checkScrollPosition = (
+    element: HTMLDivElement,
+    setShowArrow: (show: boolean) => void
+  ) => {
+    const isAtEnd = 
+      Math.abs(
+        element.scrollWidth - element.clientWidth - element.scrollLeft
+      ) < 10;
+    setShowArrow(!isAtEnd);
+  };
+
+  useEffect(() => {
+    const featuredElement = scrollRef.current;
+    const speakersElement = speakersRef.current;
+    const showcaseElement = showcaseRef.current;
+
+    if (featuredElement) {
+      checkScrollPosition(featuredElement, setShowFeaturedArrow);
+      featuredElement.addEventListener('scroll', () => 
+        checkScrollPosition(featuredElement, setShowFeaturedArrow)
+      );
+    }
+
+    if (speakersElement) {
+      checkScrollPosition(speakersElement, setShowSpeakersArrow);
+      speakersElement.addEventListener('scroll', () => 
+        checkScrollPosition(speakersElement, setShowSpeakersArrow)
+      );
+    }
+
+    if (showcaseElement) {
+      checkScrollPosition(showcaseElement, setShowShowcaseArrow);
+      showcaseElement.addEventListener('scroll', () => 
+        checkScrollPosition(showcaseElement, setShowShowcaseArrow)
+      );
+    }
+
+    return () => {
+      if (featuredElement) {
+        featuredElement.removeEventListener('scroll', () => 
+          checkScrollPosition(featuredElement, setShowFeaturedArrow)
+        );
+      }
+      if (speakersElement) {
+        speakersElement.removeEventListener('scroll', () => 
+          checkScrollPosition(speakersElement, setShowSpeakersArrow)
+        );
+      }
+      if (showcaseElement) {
+        showcaseElement.removeEventListener('scroll', () => 
+          checkScrollPosition(showcaseElement, setShowShowcaseArrow)
+        );
+      }
+    };
+  }, []);
 
   const scrollRight = (ref: React.RefObject<HTMLDivElement>) => {
     if (ref.current) {
@@ -66,12 +126,14 @@ const Events = () => {
               onClick={() => navigate("/events/digital-policy")}
             />
           </div>
-          <button
-            onClick={() => scrollRight(scrollRef)}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-[#1A1F7C] rounded-full flex items-center justify-center text-white shadow-lg z-10 hover:bg-[#2A307C] transition-colors"
-          >
-            <ArrowRight className="w-6 h-6" />
-          </button>
+          {showFeaturedArrow && (
+            <button
+              onClick={() => scrollRight(scrollRef)}
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-[#1A1F7C] rounded-full flex items-center justify-center text-white shadow-lg z-10 hover:bg-[#2A307C] transition-colors"
+            >
+              <ArrowRight className="w-6 h-6" />
+            </button>
+          )}
         </section>
 
         <section className="mb-12 relative">
@@ -82,38 +144,37 @@ const Events = () => {
           >
             <div className="flex-none w-[calc(100%-3rem)] snap-start">
               <SpeakerCard
-                image="/lovable-uploads/0ac720e3-5aee-45de-8866-44642f6feeff.png"
+                image="/lovable-uploads/photo-1581092795360-fd1ca04f0952.jpg"
                 name="H.E. Dr. John Doe"
                 title="Minister of Tech Policy"
                 role="Keynote Speaker"
-                onClick={() => navigate("/speakers/john-doe")}
               />
             </div>
             <div className="flex-none w-[calc(100%-3rem)] snap-start">
               <SpeakerCard
-                image="/lovable-uploads/0ac720e3-5aee-45de-8866-44642f6feeff.png"
+                image="/lovable-uploads/photo-1581091226825-a6a2a5aee158.jpg"
                 name="Dr. Sarah Johnson"
                 title="AI Ethics Researcher"
                 role="Guest Speaker"
-                onClick={() => navigate("/speakers/sarah-johnson")}
               />
             </div>
             <div className="flex-none w-[calc(100%-3rem)] snap-start">
               <SpeakerCard
-                image="/lovable-uploads/0ac720e3-5aee-45de-8866-44642f6feeff.png"
+                image="/lovable-uploads/photo-1526374965328-7f61d4dc18c5.jpg"
                 name="Prof. Michael Chang"
                 title="Digital Transformation Expert"
                 role="Panel Moderator"
-                onClick={() => navigate("/speakers/michael-chang")}
               />
             </div>
           </div>
-          <button
-            onClick={() => scrollRight(speakersRef)}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-[#1A1F7C] rounded-full flex items-center justify-center text-white shadow-lg z-10 hover:bg-[#2A307C] transition-colors"
-          >
-            <ArrowRight className="w-6 h-6" />
-          </button>
+          {showSpeakersArrow && (
+            <button
+              onClick={() => scrollRight(speakersRef)}
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-[#1A1F7C] rounded-full flex items-center justify-center text-white shadow-lg z-10 hover:bg-[#2A307C] transition-colors"
+            >
+              <ArrowRight className="w-6 h-6" />
+            </button>
+          )}
         </section>
 
         <section className="relative">
@@ -163,12 +224,14 @@ const Events = () => {
               />
             </div>
           </div>
-          <button
-            onClick={() => scrollRight(showcaseRef)}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-[#1A1F7C] rounded-full flex items-center justify-center text-white shadow-lg z-10 hover:bg-[#2A307C] transition-colors"
-          >
-            <ArrowRight className="w-6 h-6" />
-          </button>
+          {showShowcaseArrow && (
+            <button
+              onClick={() => scrollRight(showcaseRef)}
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-[#1A1F7C] rounded-full flex items-center justify-center text-white shadow-lg z-10 hover:bg-[#2A307C] transition-colors"
+            >
+              <ArrowRight className="w-6 h-6" />
+            </button>
+          )}
         </section>
       </div>
 
