@@ -145,24 +145,24 @@ const Events = () => {
             <div className="flex-none w-[calc(100%-3rem)] snap-start">
               <SpeakerCard
                 image="/lovable-uploads/photo-1581092795360-fd1ca04f0952.jpg"
-                name="H.E. Dr. John Doe"
-                title="Minister of Tech Policy"
+                name="Haile Gebrselassie"
+                title="Long-distance Running Legend"
                 role="Keynote Speaker"
               />
             </div>
             <div className="flex-none w-[calc(100%-3rem)] snap-start">
               <SpeakerCard
                 image="/lovable-uploads/photo-1581091226825-a6a2a5aee158.jpg"
-                name="Dr. Sarah Johnson"
-                title="AI Ethics Researcher"
+                name="Tirunesh Dibaba"
+                title="Triple Olympic Champion"
                 role="Guest Speaker"
               />
             </div>
             <div className="flex-none w-[calc(100%-3rem)] snap-start">
               <SpeakerCard
                 image="/lovable-uploads/photo-1526374965328-7f61d4dc18c5.jpg"
-                name="Prof. Michael Chang"
-                title="Digital Transformation Expert"
+                name="Abebe Bikila"
+                title="Olympic Marathon Pioneer"
                 role="Panel Moderator"
               />
             </div>
