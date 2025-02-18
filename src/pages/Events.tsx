@@ -1,4 +1,3 @@
-
 import { EventCard } from "@/components/events/EventCard";
 import { SpeakerCard } from "@/components/events/SpeakerCard";
 import { ShowcaseCard } from "@/components/events/ShowcaseCard";
@@ -22,13 +21,13 @@ const Events = () => {
   return (
     <div className="min-h-screen bg-[#F8F9FB] pb-24">
       <div className="px-6 py-8">
-        <h1 className="text-4xl font-bold mb-8">EVENTS</h1>
+        <h1 className="text-4xl font-bold mb-8 text-[#1A1F7C]">EVENTS</h1>
 
         <section className="mb-12 relative">
-          <h2 className="text-3xl font-medium mb-6">Featured Sessions</h2>
+          <h2 className="text-3xl font-medium mb-6 text-gray-900">Featured Sessions</h2>
           <div 
             ref={scrollRef}
-            className="flex overflow-x-auto gap-4 pb-4 hide-scrollbar relative"
+            className="flex overflow-x-auto gap-4 pb-4 hide-scrollbar snap-x snap-mandatory"
           >
             <EventCard
               type="Public Session"
@@ -69,19 +68,19 @@ const Events = () => {
           </div>
           <button
             onClick={() => scrollRight(scrollRef)}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-[#1A1F7C] rounded-full flex items-center justify-center text-white shadow-lg z-10"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-[#1A1F7C] rounded-full flex items-center justify-center text-white shadow-lg z-10 hover:bg-[#2A307C] transition-colors"
           >
             <ArrowRight className="w-6 h-6" />
           </button>
         </section>
 
         <section className="mb-12 relative">
-          <h2 className="text-3xl font-medium mb-6">Featured Speakers</h2>
+          <h2 className="text-3xl font-medium mb-6 text-gray-900">Featured Speakers</h2>
           <div 
             ref={speakersRef}
-            className="flex overflow-x-auto gap-4 pb-4 hide-scrollbar relative"
+            className="flex overflow-x-auto gap-4 pb-4 hide-scrollbar snap-x snap-mandatory"
           >
-            <div className="flex-none w-[calc(100%-3rem)]">
+            <div className="flex-none w-[calc(100%-3rem)] snap-start">
               <SpeakerCard
                 image="/lovable-uploads/0ac720e3-5aee-45de-8866-44642f6feeff.png"
                 name="H.E. Dr. John Doe"
@@ -90,7 +89,7 @@ const Events = () => {
                 onClick={() => navigate("/speakers/john-doe")}
               />
             </div>
-            <div className="flex-none w-[calc(100%-3rem)]">
+            <div className="flex-none w-[calc(100%-3rem)] snap-start">
               <SpeakerCard
                 image="/lovable-uploads/0ac720e3-5aee-45de-8866-44642f6feeff.png"
                 name="Dr. Sarah Johnson"
@@ -99,7 +98,7 @@ const Events = () => {
                 onClick={() => navigate("/speakers/sarah-johnson")}
               />
             </div>
-            <div className="flex-none w-[calc(100%-3rem)]">
+            <div className="flex-none w-[calc(100%-3rem)] snap-start">
               <SpeakerCard
                 image="/lovable-uploads/0ac720e3-5aee-45de-8866-44642f6feeff.png"
                 name="Prof. Michael Chang"
@@ -111,14 +110,14 @@ const Events = () => {
           </div>
           <button
             onClick={() => scrollRight(speakersRef)}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-[#1A1F7C] rounded-full flex items-center justify-center text-white shadow-lg z-10"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-[#1A1F7C] rounded-full flex items-center justify-center text-white shadow-lg z-10 hover:bg-[#2A307C] transition-colors"
           >
             <ArrowRight className="w-6 h-6" />
           </button>
         </section>
 
         <section className="relative">
-          <h2 className="text-3xl font-medium mb-6">Innovative Showcase</h2>
+          <h2 className="text-3xl font-medium mb-6 text-gray-900">Innovative Showcase</h2>
           <div 
             ref={showcaseRef}
             className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-4"
@@ -166,7 +165,7 @@ const Events = () => {
           </div>
           <button
             onClick={() => scrollRight(showcaseRef)}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-[#1A1F7C] rounded-full flex items-center justify-center text-white shadow-lg z-10"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-[#1A1F7C] rounded-full flex items-center justify-center text-white shadow-lg z-10 hover:bg-[#2A307C] transition-colors"
           >
             <ArrowRight className="w-6 h-6" />
           </button>
