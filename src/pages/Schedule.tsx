@@ -1,0 +1,61 @@
+
+import { ScheduleHeader } from "@/components/schedule/ScheduleHeader";
+import { ScheduleItem } from "@/components/schedule/ScheduleItem";
+import { GuestCard } from "@/components/schedule/GuestCard";
+import { BottomNav } from "@/components/schedule/BottomNav";
+
+const Schedule = () => {
+  return (
+    <div className="pb-20">
+      <ScheduleHeader />
+      
+      <div className="px-6 py-8">
+        <h2 className="text-3xl font-bold mb-6">Program Schedule</h2>
+        
+        <div className="space-y-6">
+          <ScheduleItem
+            time="09:00 AM"
+            title="Opening Ceremony: Future of Innovation"
+            location="Main Auditorium"
+            type="keynote"
+          />
+          <ScheduleItem
+            time="10:30 AM"
+            title="Networking Break"
+            location="Exhibition Hall"
+            type="break"
+          />
+          <ScheduleItem
+            time="11:00 AM"
+            title="AI Governance Summit"
+            location="Diplomatic Suite A"
+            type="closed-door"
+          />
+        </div>
+      </div>
+
+      <div className="px-6 py-8">
+        <h2 className="text-3xl font-bold text-[#1A1F7C] mb-6">Distinguished Guests</h2>
+        
+        <div className="space-y-6">
+          <GuestCard
+            image="/placeholder.svg"
+            name="H.E. Dr. Elena Torres"
+            title="Minister of Emerging Technologies"
+            roles={["Keynote Speaker", "VIP"]}
+          />
+          <GuestCard
+            image="/placeholder.svg"
+            name="Dr. Li Wei"
+            title="Global Tech Diplomacy Award Recipient"
+            roles={["Panel Chair", "VIP"]}
+          />
+        </div>
+      </div>
+
+      <BottomNav />
+    </div>
+  );
+};
+
+export default Schedule;
