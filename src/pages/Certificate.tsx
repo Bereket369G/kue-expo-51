@@ -1,20 +1,13 @@
-
 import { ArrowLeft, Download } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { BottomNav } from "@/components/schedule/BottomNav";
-
 const Certificate = () => {
   const navigate = useNavigate();
-
-  return (
-    <div className="min-h-screen bg-white pb-20">
+  return <div className="min-h-screen bg-white pb-20">
       {/* Header */}
       <header className="px-6 py-3 flex items-center gap-4">
-        <button
-          onClick={() => navigate(-1)}
-          className="p-1.5"
-        >
+        <button onClick={() => navigate(-1)} className="p-1.5">
           <ArrowLeft className="w-5 h-5" />
         </button>
         <h1 className="text-xl font-medium">Your Certificate</h1>
@@ -63,21 +56,17 @@ const Certificate = () => {
             <h3 className="text-[#C25B3F] text-xl font-medium">Innovation & Policy</h3>
             <h4 className="text-[#C25B3F] text-xl font-medium">Leadership Award</h4>
             <p className="text-lg text-gray-600">John Anderson</p>
-            <p className="text-sm text-gray-500">March 15, 2025</p>
+            <p className="text-sm text-gray-500">February 27, 2025</p>
           </div>
         </div>
 
-        <Button 
-          className="w-full bg-[#9b87f5] hover:bg-[#8b77e5] text-white h-12 rounded-full flex items-center justify-center gap-2"
-        >
+        <Button className="w-full bg-[#9b87f5] hover:bg-[#8b77e5] text-white h-12 rounded-full flex items-center justify-center gap-2">
           <Download className="w-4 h-4" />
           PDF
         </Button>
       </div>
 
       <BottomNav />
-    </div>
-  );
+    </div>;
 };
-
 export default Certificate;
