@@ -1,4 +1,6 @@
 
+import { ArrowRight } from "lucide-react";
+
 interface SpeakerCardProps {
   image: string;
   name: string;
