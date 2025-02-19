@@ -20,7 +20,7 @@ export const LaunchScreen = () => {
           </div>
 
           <Button 
-            onClick={() => navigate("/events")}
+            onClick={() => navigate("/registration")}
             size="lg"
             className="w-full bg-white text-[#1A1F7C] hover:bg-white/90"
           >

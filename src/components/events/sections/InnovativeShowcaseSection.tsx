@@ -23,7 +23,7 @@ export const InnovativeShowcaseSection = ({
       >
         <div className="snap-start shrink-0 w-1/2">
           <ShowcaseCard
-            image="/lovable-uploads/0ac720e3-5aee-45de-8866-44642f6feeff.png"
+            image="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=2969&auto=format&fit=crop"
             type="Government-Backed"
             title="Green Energy"
             subtitle="Initiative"
@@ -33,7 +33,7 @@ export const InnovativeShowcaseSection = ({
         </div>
         <div className="snap-start shrink-0 w-1/2">
           <ShowcaseCard
-            image="/lovable-uploads/0ac720e3-5aee-45de-8866-44642f6feeff.png"
+            image="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2970&auto=format&fit=crop"
             type="Award-Winning"
             title="AI Policy Framework"
             subtitle="Next-gen governance"
@@ -43,7 +43,7 @@ export const InnovativeShowcaseSection = ({
         </div>
         <div className="snap-start shrink-0 w-1/2">
           <ShowcaseCard
-            image="/lovable-uploads/0ac720e3-5aee-45de-8866-44642f6feeff.png"
+            image="https://images.unsplash.com/photo-1557425529-b1ae9c141e7d?q=80&w=2970&auto=format&fit=crop"
             type="Government-Backed"
             title="Smart Cities"
             subtitle="Urban Planning"
@@ -53,7 +53,7 @@ export const InnovativeShowcaseSection = ({
         </div>
         <div className="snap-start shrink-0 w-1/2">
           <ShowcaseCard
-            image="/lovable-uploads/0ac720e3-5aee-45de-8866-44642f6feeff.png"
+            image="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2970&auto=format&fit=crop"
             type="Award-Winning"
             title="Digital ID System"
             subtitle="Security Innovation"
