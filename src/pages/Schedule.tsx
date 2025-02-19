@@ -39,15 +39,15 @@ const Schedule = () => {
         
         <div className="space-y-4">
           <GuestCard
-            image="/placeholder.svg"
+            image="/lovable-uploads/f37da260-e928-421d-8716-9ed2d6377fe8.png"
             name="H.E. Abiy Ahmed"
             title="Prime Minister of Ethiopia"
             roles={["Keynote Speaker", "VIP"]}
           />
           <GuestCard
-            image="/placeholder.svg"
-            name="H.E. Hailemariam Desalegn"
-            title="Former Prime Minister of Ethiopia"
+            image="/lovable-uploads/f903df5a-b520-4352-adbb-b1e988db0e3a.png"
+            name="Dr. Birhane Meskel"
+            title="Former Minister of Education"
             roles={["Panel Chair", "VIP"]}
           />
         </div>

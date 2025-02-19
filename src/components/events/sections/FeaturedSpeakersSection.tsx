@@ -23,7 +23,7 @@ export const FeaturedSpeakersSection = ({
       >
         <div className="flex-none w-[calc(100%-3rem)] snap-start">
           <SpeakerCard
-            image="/lovable-uploads/photo-1581092795360-fd1ca04f0952.jpg"
+            image="/lovable-uploads/ad4f4cc3-a63b-40ec-9bfc-438c718e6a50.png"
             name="Haile Gebrselassie"
             title="Long-distance Running Legend"
             role="Keynote Speaker"
@@ -31,7 +31,7 @@ export const FeaturedSpeakersSection = ({
         </div>
         <div className="flex-none w-[calc(100%-3rem)] snap-start">
           <SpeakerCard
-            image="/lovable-uploads/photo-1581091226825-a6a2a5aee158.jpg"
+            image="/lovable-uploads/38afb8f8-5bde-4933-8cf6-c2c7abb7c3c2.png"
             name="Tirunesh Dibaba"
             title="Triple Olympic Champion"
             role="Guest Speaker"
@@ -39,9 +39,9 @@ export const FeaturedSpeakersSection = ({
         </div>
         <div className="flex-none w-[calc(100%-3rem)] snap-start">
           <SpeakerCard
-            image="/lovable-uploads/photo-1526374965328-7f61d4dc18c5.jpg"
-            name="Abebe Bikila"
-            title="Olympic Marathon Pioneer"
+            image="/lovable-uploads/cef38671-6c14-470d-9c11-c84d6f95344f.png"
+            name="Meseret Defar"
+            title="Olympic Gold Medalist"
             role="Panel Moderator"
           />
         </div>
