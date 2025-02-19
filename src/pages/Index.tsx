@@ -1,54 +1,54 @@
-
 import { LaunchScreen } from "@/components/launch/LaunchScreen";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, Users, Award } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-
 const Index = () => {
   const navigate = useNavigate();
-
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-[#F8F9FB] to-white">
+  return <div className="min-h-screen bg-gradient-to-b from-[#F8F9FB] to-white">
       {/* Hero Section */}
       <div className="relative px-6 pt-12 pb-20 md:pt-20 md:pb-32">
         <div className="max-w-7xl mx-auto">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] bg-clip-text text-transparent"
-          >
+          <motion.h1 initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6
+        }} className="md:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] bg-clip-text text-transparent text-6xl">
             Ethiopian Leadership & Technology Summit
           </motion.h1>
           
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-gray-600 text-center mb-12 max-w-2xl mx-auto"
-          >
+          <motion.p initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6,
+          delay: 0.2
+        }} className="text-xl text-gray-600 text-center mb-12 max-w-2xl mx-auto">
             Join us for a groundbreaking event that unites Leadership excellence with technological innovation
           </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          >
-            <Button 
-              onClick={() => navigate("/registration")}
-              className="bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] hover:opacity-90 text-white px-8 py-6 rounded-full text-lg flex items-center gap-2 transition-all duration-300 hover:scale-105"
-            >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6,
+          delay: 0.4
+        }} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button onClick={() => navigate("/registration")} className="bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] hover:opacity-90 text-white px-8 py-6 rounded-full text-lg flex items-center gap-2 transition-all duration-300 hover:scale-105">
               Register Now
               <ArrowRight className="w-5 h-5" />
             </Button>
-            <Button 
-              onClick={() => navigate("/schedule")}
-              variant="outline"
-              className="px-8 py-6 rounded-full text-lg border-[#6DD5FA] text-[#6DD5FA] hover:bg-gradient-to-r hover:from-[#6DD5FA] hover:to-[#FF758C] hover:text-white transition-all duration-300"
-            >
+            <Button onClick={() => navigate("/schedule")} variant="outline" className="px-8 py-6 rounded-full text-lg border-[#6DD5FA] text-[#6DD5FA] hover:bg-gradient-to-r hover:from-[#6DD5FA] hover:to-[#FF758C] hover:text-white transition-all duration-300">
               View Schedule
             </Button>
           </motion.div>
@@ -58,46 +58,64 @@ const Index = () => {
       {/* Features Section */}
       <div className="px-6 py-16 bg-white/50 backdrop-blur-lg">
         <div className="max-w-7xl mx-auto">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] bg-clip-text text-transparent"
-          >
+          <motion.h2 initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6
+        }} className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] bg-clip-text text-transparent">
             Why Join Us?
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              whileHover={{ scale: 1.05 }}
-              className="flex flex-col items-center text-center p-6 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.6,
+            delay: 0.6
+          }} whileHover={{
+            scale: 1.05
+          }} className="flex flex-col items-center text-center p-6 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300">
               <Calendar className="w-12 h-12 text-[#6DD5FA] mb-4" />
               <h3 className="text-xl font-semibold mb-2">4-Day Event</h3>
               <p className="text-gray-600">Comprehensive program covering leadership and technology</p>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              whileHover={{ scale: 1.05 }}
-              className="flex flex-col items-center text-center p-6 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.6,
+            delay: 0.8
+          }} whileHover={{
+            scale: 1.05
+          }} className="flex flex-col items-center text-center p-6 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300">
               <Users className="w-12 h-12 text-[#FF758C] mb-4" />
               <h3 className="text-xl font-semibold mb-2">Expert Speakers</h3>
               <p className="text-gray-600">Learn from industry leaders and innovators</p>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1 }}
-              whileHover={{ scale: 1.05 }}
-              className="flex flex-col items-center text-center p-6 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.6,
+            delay: 1
+          }} whileHover={{
+            scale: 1.05
+          }} className="flex flex-col items-center text-center p-6 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300">
               <Award className="w-12 h-12 text-[#9b87f5] mb-4" />
               <h3 className="text-xl font-semibold mb-2">Networking</h3>
               <p className="text-gray-600">Connect with industry professionals and innovators</p>
@@ -109,39 +127,36 @@ const Index = () => {
       {/* Partners Section */}
       <div className="px-6 py-16 bg-gradient-to-b from-white/50 to-[#F8F9FB]">
         <div className="max-w-7xl mx-auto">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-2xl md:text-3xl font-semibold text-center mb-12 bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] bg-clip-text text-transparent"
-          >
+          <motion.h2 initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6
+        }} className="text-2xl md:text-3xl font-semibold text-center mb-12 bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] bg-clip-text text-transparent">
             Our Partners
           </motion.h2>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
-            className="flex flex-col md:flex-row justify-center items-center gap-12"
-          >
-            <motion.div 
-              whileHover={{ scale: 1.05 }}
-              className="w-48 h-48 relative flex items-center justify-center p-4 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <img 
-                src="/lovable-uploads/0ac8a5f3-ead5-487c-9d9f-14b501866eea.png"
-                alt="Haile Grand"
-                className="max-w-full max-h-full object-contain"
-              />
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6,
+          delay: 1.2
+        }} className="flex flex-col md:flex-row justify-center items-center gap-12">
+            <motion.div whileHover={{
+            scale: 1.05
+          }} className="w-48 h-48 relative flex items-center justify-center p-4 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300">
+              <img src="/lovable-uploads/0ac8a5f3-ead5-487c-9d9f-14b501866eea.png" alt="Haile Grand" className="max-w-full max-h-full object-contain" />
             </motion.div>
-            <motion.div 
-              whileHover={{ scale: 1.05 }}
-              className="w-48 h-48 relative flex items-center justify-center p-4 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <img 
-                src="/lovable-uploads/32fa31a6-5e5c-4b2e-905f-7a84ffa14f88.png"
-                alt="Kotebe University of Education"
-                className="max-w-full max-h-full object-contain"
-              />
+            <motion.div whileHover={{
+            scale: 1.05
+          }} className="w-48 h-48 relative flex items-center justify-center p-4 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300">
+              <img src="/lovable-uploads/32fa31a6-5e5c-4b2e-905f-7a84ffa14f88.png" alt="Kotebe University of Education" className="max-w-full max-h-full object-contain" />
             </motion.div>
           </motion.div>
         </div>
@@ -149,8 +164,6 @@ const Index = () => {
 
       {/* Launch Screen Component */}
       <LaunchScreen />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
