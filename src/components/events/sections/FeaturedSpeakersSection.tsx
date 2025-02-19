@@ -27,6 +27,7 @@ export const FeaturedSpeakersSection = ({
             name="Haile Gebrselassie"
             title="Long-distance Running Legend"
             role="Keynote Speaker"
+            loading="lazy"
           />
         </div>
         <div className="flex-none w-[calc(100%-3rem)] snap-start">
@@ -35,14 +36,16 @@ export const FeaturedSpeakersSection = ({
             name="Tirunesh Dibaba"
             title="Triple Olympic Champion"
             role="Guest Speaker"
+            loading="lazy"
           />
         </div>
         <div className="flex-none w-[calc(100%-3rem)] snap-start">
           <SpeakerCard
             image="/lovable-uploads/cef38671-6c14-470d-9c11-c84d6f95344f.png"
-            name="Meseret Defar"
-            title="Olympic Gold Medalist"
+            name="Derartu Tulu"
+            title="First Black African woman to win an Olympic gold medal"
             role="Panel Moderator"
+            loading="lazy"
           />
         </div>
       </div>
