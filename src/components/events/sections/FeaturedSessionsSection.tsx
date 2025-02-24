@@ -3,7 +3,6 @@ import { EventCard } from "@/components/events/EventCard";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { RefObject, useState } from "react";
-import { Button } from "@/components/ui/button";
 
 interface FeaturedSessionsSectionProps {
   scrollRef: RefObject<HTMLDivElement>;
@@ -103,21 +102,30 @@ export const FeaturedSessionsSection = ({
     <section className="mb-12 relative">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-3xl font-medium text-gray-900">Featured Sessions</h2>
-        <div className="flex gap-2">
-          <Button
-            variant={activeDay === 'day1' ? 'default' : 'outline'}
-            onClick={() => setActiveDay('day1')}
-            className="bg-[#1A1F7C] text-white hover:bg-[#2A307C]"
-          >
-            Day 1
-          </Button>
-          <Button
-            variant={activeDay === 'day2' ? 'default' : 'outline'}
-            onClick={() => setActiveDay('day2')}
-            className="bg-[#1A1F7C] text-white hover:bg-[#2A307C]"
-          >
-            Day 2
-          </Button>
+        <div className="relative bg-gray-200 rounded-full p-1 w-48">
+          <div 
+            className={`absolute top-1 transition-transform duration-200 ease-in-out ${
+              activeDay === 'day1' ? 'translate-x-0' : 'translate-x-full'
+            } w-24 h-8 bg-[#1A1F7C] rounded-full`}
+          />
+          <div className="relative flex">
+            <button
+              onClick={() => setActiveDay('day1')}
+              className={`flex-1 h-8 text-sm font-medium transition-colors duration-200 z-10 ${
+                activeDay === 'day1' ? 'text-white' : 'text-gray-600'
+              }`}
+            >
+              Day 1
+            </button>
+            <button
+              onClick={() => setActiveDay('day2')}
+              className={`flex-1 h-8 text-sm font-medium transition-colors duration-200 z-10 ${
+                activeDay === 'day2' ? 'text-white' : 'text-gray-600'
+              }`}
+            >
+              Day 2
+            </button>
+          </div>
         </div>
       </div>
       <div 
