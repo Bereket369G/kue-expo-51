@@ -1,9 +1,11 @@
+
 import { LaunchScreen } from "@/components/launch/LaunchScreen";
 import { motion, useInView } from "framer-motion";
 import { ArrowRight, Calendar, Users, Award } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
+
 const Index = () => {
   const navigate = useNavigate();
   const ref1 = useRef(null);
@@ -21,46 +23,58 @@ const Index = () => {
     once: true,
     margin: "-100px"
   });
-  return <div className="min-h-screen bg-gradient-to-b from-[#F8F9FB] to-white">
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-[#F8F9FB] to-white">
       {/* Hero Section */}
       <div className="relative px-6 pt-12 pb-20 md:pt-20 md:pb-32 bg-blue-950">
         <div className="max-w-7xl mx-auto">
-          <motion.h1 initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6
-        }} className="font-bold text-center mb-6 bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] bg-clip-text text-transparent md:text-6xl text-5xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-4 text-white md:text-4xl text-3xl font-light"
+          >
+            Welcome To
+          </motion.h2>
+          
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="font-bold text-center mb-6 bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] bg-clip-text text-transparent md:text-6xl text-5xl"
+          >
             Artificial Intelligence In Education: Opportunities And Challenges For The Global South
           </motion.h1>
 
-          <motion.p initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6,
-          delay: 0.2
-        }} className="text-center mb-12 max-w-2xl mx-auto text-gray-300 text-3xl font-bold">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-center mb-2 max-w-2xl mx-auto text-gray-300 text-3xl font-bold"
+          >
             3rd International Research Conference
           </motion.p>
 
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6,
-          delay: 0.4
-        }} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button onClick={() => navigate("/schedule")} className="bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] hover:opacity-90 text-white px-8 py-6 rounded-full text-lg flex items-center gap-2 transition-all duration-300 hover:scale-105">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-center mb-12 text-[#6DD5FA] text-2xl font-bold"
+          >
+            2025
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+            <Button
+              onClick={() => navigate("/schedule")}
+              className="bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] hover:opacity-90 text-white px-8 py-6 rounded-full text-lg flex items-center gap-2 transition-all duration-300 hover:scale-105"
+            >
               View Schedule
               <ArrowRight className="w-5 h-5" />
             </Button>
@@ -157,6 +171,8 @@ const Index = () => {
 
       {/* Launch Screen Component */}
       <LaunchScreen />
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
