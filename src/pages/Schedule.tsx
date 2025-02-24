@@ -63,12 +63,12 @@ const Schedule = () => {
         <h2 className="text-3xl font-bold text-[#1A1F7C] mb-6">Distinguished Guests</h2>
         
         <div className="space-y-4">
-          <GuestCard image="/lovable-uploads/f37da260-e928-421d-8716-9ed2d6377fe8.png" name="H.E. Abiy Ahmed" title="Prime Minister of Ethiopia" roles={["Keynote Speaker", "VIP"]} />
-          <GuestCard image="/lovable-uploads/f903df5a-b520-4352-adbb-b1e988db0e3a.png" name="Dr. Birhane Meskel" title="Former Minister of Education" roles={["Panel Chair", "VIP"]} />
-          <GuestCard image="/lovable-uploads/ad4f4cc3-a63b-40ec-9bfc-438c718e6a50.png" name="Haile Gebrselassie" title="Olympic Champion & Business Leader" roles={["Guest Speaker", "Innovation Leader"]} />
-          <GuestCard image="/lovable-uploads/38afb8f8-5bde-4933-8cf6-c2c7abb7c3c2.png" name="Tirunesh Dibaba" title="Triple Olympic Champion" roles={["Special Guest", "Sports Ambassador"]} />
-          <GuestCard image="/lovable-uploads/cef38671-6c14-470d-9c11-c84d6f95344f.png" name="Derartu Tulu" title="Olympic Gold Medalist" roles={["Distinguished Guest", "Sports Legend"]} />
-          <GuestCard image="/lovable-uploads/32fa31a6-5e5c-4b2e-905f-7a84ffa14f88.png" name="Dr. Eleni Gabre-Madhin" title="Founder & CEO, blueMoon" roles={["Innovation Speaker", "Tech Leader"]} />
+          <GuestCard image="/images/f37da260-e928-421d-8716-9ed2d6377fe8.png" name="H.E. Abiy Ahmed" title="Prime Minister of Ethiopia" roles={["Keynote Speaker", "VIP"]} />
+          <GuestCard image="/images/f903df5a-b520-4352-adbb-b1e988db0e3a.png" name="Dr. Birhane Meskel" title="Former Minister of Education" roles={["Panel Chair", "VIP"]} />
+          <GuestCard image="/images/ad4f4cc3-a63b-40ec-9bfc-438c718e6a50.png" name="Haile Gebrselassie" title="Olympic Champion & Business Leader" roles={["Guest Speaker", "Innovation Leader"]} />
+          <GuestCard image="/images/38afb8f8-5bde-4933-8cf6-c2c7abb7c3c2.png" name="Tirunesh Dibaba" title="Triple Olympic Champion" roles={["Special Guest", "Sports Ambassador"]} />
+          <GuestCard image="/images/cef38671-6c14-470d-9c11-c84d6f95344f.png" name="Derartu Tulu" title="Olympic Gold Medalist" roles={["Distinguished Guest", "Sports Legend"]} />
+          <GuestCard image="/images/32fa31a6-5e5c-4b2e-905f-7a84ffa14f88.png" name="Dr. Eleni Gabre-Madhin" title="Founder & CEO, blueMoon" roles={["Innovation Speaker", "Tech Leader"]} />
         </div>
       </div>
 

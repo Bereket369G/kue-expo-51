@@ -23,7 +23,7 @@ export const FeaturedSpeakersSection = ({
       >
         <div className="flex-none w-[calc(100%-3rem)] snap-start">
           <SpeakerCard
-            image="/lovable-uploads/ad4f4cc3-a63b-40ec-9bfc-438c718e6a50.png"
+            image="/images/ad4f4cc3-a63b-40ec-9bfc-438c718e6a50.png"
             name="Haile Gebrselassie"
             title="Long-distance Running Legend"
             role="Keynote Speaker"
@@ -32,7 +32,7 @@ export const FeaturedSpeakersSection = ({
         </div>
         <div className="flex-none w-[calc(100%-3rem)] snap-start">
           <SpeakerCard
-            image="/lovable-uploads/38afb8f8-5bde-4933-8cf6-c2c7abb7c3c2.png"
+            image="/images/38afb8f8-5bde-4933-8cf6-c2c7abb7c3c2.png"
             name="Tirunesh Dibaba"
             title="Triple Olympic Champion"
             role="Guest Speaker"
@@ -41,7 +41,7 @@ export const FeaturedSpeakersSection = ({
         </div>
         <div className="flex-none w-[calc(100%-3rem)] snap-start">
           <SpeakerCard
-            image="/lovable-uploads/cef38671-6c14-470d-9c11-c84d6f95344f.png"
+            image="/images/cef38671-6c14-470d-9c11-c84d6f95344f.png"
             name="Derartu Tulu"
             title="First Black African woman to win an Olympic gold medal"
             role="Panel Moderator"
@@ -50,7 +50,7 @@ export const FeaturedSpeakersSection = ({
         </div>
         <div className="flex-none w-[calc(100%-3rem)] snap-start">
           <SpeakerCard
-            image="/lovable-uploads/4f3ee650-28c5-4aaa-acd2-60805cae3fd1.png"
+            image="/images/4f3ee650-28c5-4aaa-acd2-60805cae3fd1.png"
             name="Dr. Solomon Dadi"
             title="Director of Digital Transformation"
             role="Technology Expert"
@@ -59,7 +59,7 @@ export const FeaturedSpeakersSection = ({
         </div>
         <div className="flex-none w-[calc(100%-3rem)] snap-start">
           <SpeakerCard
-            image="/lovable-uploads/af728d60-9b9b-4775-84db-f99ada2abc0b.png"
+            image="/images/af728d60-9b9b-4775-84db-f99ada2abc0b.png"
             name="Dr. Bethlehem Alemu"
             title="Founder, soleRebels"
             role="Innovation Leader"

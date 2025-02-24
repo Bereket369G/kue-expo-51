@@ -172,7 +172,7 @@ const Index = () => {
             <motion.div whileHover={{
             scale: 1.05
           }} className="w-48 h-48 relative flex items-center justify-center p-4 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300">
-              <img src="/lovable-uploads/32fa31a6-5e5c-4b2e-905f-7a84ffa14f88.png" alt="Kotebe University of Education" className="max-w-full max-h-full object-contain" />
+              <img src="/images/32fa31a6-5e5c-4b2e-905f-7a84ffa14f88.png" alt="Kotebe University of Education" className="max-w-full max-h-full object-contain" />
             </motion.div>
           </motion.div>
         </div>
