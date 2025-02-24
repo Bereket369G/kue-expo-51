@@ -33,7 +33,7 @@ const Index = () => {
           y: 0
         }} transition={{
           duration: 0.6
-        }} className="md:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] bg-clip-text text-transparent text-6xl">Artificial Intelligence In Education: Opportunities And Challenges For The Global South</motion.h1>
+        }} className="font-bold text-center mb-6 bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] bg-clip-text text-transparent md:text-6xl text-5xl">Artificial Intelligence In Education: Opportunities And Challenges For The Global South</motion.h1>
           
           <motion.p initial={{
           opacity: 0,
