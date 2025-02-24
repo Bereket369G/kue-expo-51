@@ -61,9 +61,7 @@ Research Conference</motion.p>
               Register Now
               <ArrowRight className="w-5 h-5" />
             </Button>
-            <Button onClick={() => navigate("/registration")} variant="outline" className="px-8 py-6 rounded-full text-lg border-[#6DD5FA] text-[#6DD5FA] hover:bg-gradient-to-r hover:from-[#6DD5FA] hover:to-[#FF758C] hover:text-white transition-all duration-300">
-              View Schedule
-            </Button>
+            
           </motion.div>
         </div>
       </div>
