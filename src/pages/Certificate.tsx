@@ -7,15 +7,16 @@ import { useEffect, useState } from "react";
 
 const Certificate = () => {
   const navigate = useNavigate();
-  // Changed from 30000 to 10 seconds (10000 milliseconds)
-  const [timeLeft, setTimeLeft] = useState(10000);
+  const [timeLeft, setTimeLeft] = useState(10);
   const [progress, setProgress] = useState(100);
+  const [isTimerEnded, setIsTimerEnded] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(prev => {
         if (prev <= 0) {
           clearInterval(timer);
+          setIsTimerEnded(true);
           return 0;
         }
         return prev - 1;
@@ -25,25 +26,17 @@ const Certificate = () => {
   }, []);
 
   useEffect(() => {
-    // Updated to use 10000 as base for percentage calculation
-    setProgress(timeLeft / 10000 * 100);
+    setProgress((timeLeft / 10) * 100);
   }, [timeLeft]);
 
-  const formatTime = (seconds: number) => {
-    // Add 3 hours to convert to Ethiopian time
-    const ethiopianSeconds = seconds + 3 * 3600;
-    const hours = Math.floor(ethiopianSeconds / 3600);
-    const minutes = Math.floor(ethiopianSeconds % 3600 / 60);
-    const remainingSeconds = ethiopianSeconds % 60;
-    const ampm = hours >= 12 ? 'PM' : 'AM';
-    const displayHours = hours % 12 || 12;
+  const formatTime = () => {
     return {
-      time: `${displayHours}:${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`,
-      ampm
+      time: `00:00:${timeLeft.toString().padStart(2, '0')}`,
+      ampm: 'AM'
     };
   };
 
-  const { time } = formatTime(timeLeft);
+  const { time } = formatTime();
 
   return (
     <div className="min-h-screen bg-white pb-20">
@@ -129,9 +122,17 @@ const Certificate = () => {
 
         <Button
           onClick={() => navigate('/certificate/search')}
-          className="w-full bg-[#9b87f5] hover:bg-[#8b77e5] text-white h-12 rounded-full flex items-center justify-center gap-2"
+          className={`w-full bg-[#9b87f5] hover:bg-[#8b77e5] text-white h-12 rounded-full flex items-center justify-center gap-2 relative overflow-hidden group ${
+            isTimerEnded ? 'ring-2 ring-orange-400 ring-opacity-50 animate-pulse' : ''
+          }`}
         >
-          <Download className="w-4 h-4" />
+          {isTimerEnded && (
+            <span className="absolute inset-0 rounded-full overflow-hidden">
+              <span className="absolute inset-0 bg-gradient-to-r from-orange-400 to-yellow-300 opacity-30 animate-pulse" />
+              <span className="absolute -inset-[100%] rotate-45 bg-gradient-to-r from-transparent via-white to-transparent opacity-50 animate-[shine_1s_ease-in-out_infinite]" />
+            </span>
+          )}
+          <Download className="w-4 h-4 relative z-10" />
           PDF
         </Button>
       </div>
