@@ -44,9 +44,8 @@ const Index = () => {
         }} transition={{
           duration: 0.6,
           delay: 0.2
-        }} className="text-xl text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Join us for a groundbreaking event that unites Leadership excellence with technological innovation
-          </motion.p>
+        }} className="text-xl text-gray-600 text-center mb-12 max-w-2xl mx-auto">3rd International
+Research Conference</motion.p>
 
           <motion.div initial={{
           opacity: 0,
