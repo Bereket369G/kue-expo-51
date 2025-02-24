@@ -121,7 +121,11 @@ const Certificate = () => {
         </div>
 
         <Button
-          onClick={() => navigate('/certificate/search')}
+          onClick={() => {
+            if (isTimerEnded) {
+              navigate('/certificate/search');
+            }
+          }}
           className={`w-full bg-[#9b87f5] hover:bg-[#8b77e5] text-white h-12 rounded-full flex items-center justify-center gap-2 relative overflow-hidden group ${
             isTimerEnded ? 'ring-2 ring-orange-400 ring-opacity-50 animate-pulse' : ''
           }`}
