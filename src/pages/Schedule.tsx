@@ -3,18 +3,59 @@ import { ScheduleHeader } from "@/components/schedule/ScheduleHeader";
 import { ScheduleItem } from "@/components/schedule/ScheduleItem";
 import { GuestCard } from "@/components/schedule/GuestCard";
 import { BottomNav } from "@/components/schedule/BottomNav";
+import { useState } from "react";
 
 const Schedule = () => {
-  return <div className="min-h-screen pb-20 bg-indigo-100">
+  const [activeDay, setActiveDay] = useState<'day1' | 'day2'>('day1');
+
+  return (
+    <div className="min-h-screen pb-20 bg-indigo-100">
       <ScheduleHeader />
       
       <div className="container mx-auto max-w-4xl px-6 py-8">
-        <h2 className="text-3xl font-bold mb-6 text-gray-900">Program Schedule</h2>
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-3xl font-bold text-gray-900">Program Schedule</h2>
+          <div className="relative p-1 w-48 bg-gray-800 rounded-full">
+            <div 
+              className={`absolute inset-y-1 ${
+                activeDay === 'day1' ? 'left-1' : 'right-1'
+              } w-[calc(50%-4px)] bg-[#1A1F7C] rounded-full transition-all duration-300`}
+            />
+            <div className="relative flex">
+              <button
+                onClick={() => setActiveDay('day1')}
+                className={`flex-1 h-8 text-sm font-medium z-10 ${
+                  activeDay === 'day1' ? 'text-white' : 'text-gray-400'
+                }`}
+              >
+                Day 1
+              </button>
+              <button
+                onClick={() => setActiveDay('day2')}
+                className={`flex-1 h-8 text-sm font-medium z-10 ${
+                  activeDay === 'day2' ? 'text-white' : 'text-gray-400'
+                }`}
+              >
+                Day 2
+              </button>
+            </div>
+          </div>
+        </div>
         
         <div className="space-y-4">
-          <ScheduleItem time="09:00 AM" title="Opening Ceremony: Future of Innovation" location="Main Auditorium" type="keynote" />
-          <ScheduleItem time="10:30 AM" title="Networking Break" location="Exhibition Hall" type="break" />
-          <ScheduleItem time="11:00 AM" title="AI Governance Summit" location="Diplomatic Suite A" type="closed-door" />
+          {activeDay === 'day1' ? (
+            <>
+              <ScheduleItem time="09:00 AM" title="Opening Ceremony: Future of Innovation" location="Main Auditorium" type="keynote" />
+              <ScheduleItem time="10:30 AM" title="Networking Break" location="Exhibition Hall" type="break" />
+              <ScheduleItem time="11:00 AM" title="AI Governance Summit" location="Diplomatic Suite A" type="closed-door" />
+            </>
+          ) : (
+            <>
+              <ScheduleItem time="09:30 AM" title="Innovation Day Opening" location="Main Auditorium" type="keynote" />
+              <ScheduleItem time="11:00 AM" title="Tech Showcase" location="Exhibition Hall" type="break" />
+              <ScheduleItem time="02:00 PM" title="Future Tech Panel" location="Conference Room B" type="closed-door" />
+            </>
+          )}
         </div>
       </div>
 
@@ -32,7 +73,8 @@ const Schedule = () => {
       </div>
 
       <BottomNav />
-    </div>;
+    </div>
+  );
 };
 
 export default Schedule;

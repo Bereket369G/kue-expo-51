@@ -1,4 +1,3 @@
-
 import { EventCard } from "@/components/events/EventCard";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -92,25 +91,25 @@ export const FeaturedSessionsSection = ({
     <section className="mb-12 relative">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-3xl font-medium text-gray-900">Featured Sessions</h2>
-        <div className="relative p-1 w-48 bg-gray-800 mx-[38px] rounded-full">
+        <div className="relative p-1 w-48 bg-gray-800 rounded-full">
           <div 
-            className={`absolute top-1 transition-transform duration-200 ease-in-out ${
-              activeDay === 'day1' ? 'translate-x-0' : 'translate-x-full'
-            } w-24 h-8 bg-[#1A1F7C] rounded-full`}
+            className={`absolute inset-y-1 ${
+              activeDay === 'day1' ? 'left-1' : 'right-1'
+            } w-[calc(50%-4px)] bg-[#1A1F7C] rounded-full transition-all duration-300`}
           />
           <div className="relative flex">
             <button
               onClick={() => setActiveDay('day1')}
-              className={`flex-1 h-8 text-sm font-medium transition-colors duration-200 z-10 ${
-                activeDay === 'day1' ? 'text-white' : 'text-gray-600'
+              className={`flex-1 h-8 text-sm font-medium z-10 ${
+                activeDay === 'day1' ? 'text-white' : 'text-gray-400'
               }`}
             >
               Day 1
             </button>
             <button
               onClick={() => setActiveDay('day2')}
-              className={`flex-1 h-8 text-sm font-medium transition-colors duration-200 z-10 ${
-                activeDay === 'day2' ? 'text-white' : 'text-gray-600'
+              className={`flex-1 h-8 text-sm font-medium z-10 ${
+                activeDay === 'day2' ? 'text-white' : 'text-gray-400'
               }`}
             >
               Day 2
