@@ -6,7 +6,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Index from "./pages/Index";
-import Registration from "./pages/Registration";
 import Schedule from "./pages/Schedule";
 import Events from "./pages/Events";
 import EventDetails from "./pages/EventDetails";
@@ -39,7 +38,6 @@ const RoutesWithTransition = () => {
   return (
     <Routes>
       <Route path="/" element={<Index />} />
-      <Route path="/registration" element={<Registration />} />
       <Route path="/schedule" element={<Schedule />} />
       <Route path="/events" element={<Events />} />
       <Route path="/events/opening-ceremony" element={<OpeningCeremony />} />

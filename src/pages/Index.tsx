@@ -1,9 +1,11 @@
+
 import { LaunchScreen } from "@/components/launch/LaunchScreen";
 import { motion, useInView } from "framer-motion";
 import { ArrowRight, Calendar, Users, Award } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
+
 const Index = () => {
   const navigate = useNavigate();
   const ref1 = useRef(null);
@@ -21,47 +23,43 @@ const Index = () => {
     once: true,
     margin: "-100px"
   });
-  return <div className="min-h-screen bg-gradient-to-b from-[#F8F9FB] to-white">
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-[#F8F9FB] to-white">
       {/* Hero Section */}
       <div className="relative px-6 pt-12 pb-20 md:pt-20 md:pb-32 bg-blue-950">
         <div className="max-w-7xl mx-auto">
-          <motion.h1 initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6
-        }} className="font-bold text-center mb-6 bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] bg-clip-text text-transparent md:text-6xl text-5xl">Artificial Intelligence In Education: Opportunities And Challenges For The Global South</motion.h1>
-          
-          <motion.p initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6,
-          delay: 0.2
-        }} className="text-gray-600 text-center mb-12 max-w-2xl mx-auto text-3xl">3rd International
-Research Conference</motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="font-bold text-center mb-6 bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] bg-clip-text text-transparent md:text-6xl text-5xl"
+          >
+            Artificial Intelligence In Education: Opportunities And Challenges For The Global South
+          </motion.h1>
 
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6,
-          delay: 0.4
-        }} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button onClick={() => navigate("/registration")} className="bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] hover:opacity-90 text-white px-8 py-6 rounded-full text-lg flex items-center gap-2 transition-all duration-300 hover:scale-105">
-              Register Now
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-gray-600 text-center mb-12 max-w-2xl mx-auto text-3xl"
+          >
+            3rd International Research Conference
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+            <Button
+              onClick={() => navigate("/schedule")}
+              className="bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] hover:opacity-90 text-white px-8 py-6 rounded-full text-lg flex items-center gap-2 transition-all duration-300 hover:scale-105"
+            >
+              View Schedule
               <ArrowRight className="w-5 h-5" />
             </Button>
-            
           </motion.div>
         </div>
       </div>
@@ -123,30 +121,29 @@ Research Conference</motion.p>
       {/* Partners Section */}
       <div className="px-6 py-16 bg-gradient-to-b from-white/50 to-[#F8F9FB] bg-blue-950">
         <div className="max-w-7xl mx-auto">
-          <motion.h2 initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6
-        }} className="text-2xl font-semibold text-center mb-12 bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] bg-clip-text text-blue-800 md:text-4xl">Hosted By</motion.h2>
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6,
-          delay: 1.2
-        }} className="flex flex-col md:flex-row justify-center items-center gap-12">
-            
-            <motion.div whileHover={{
-            scale: 1.05
-          }} className="w-48 h-48 relative flex items-center justify-center p-4 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300">
-              <img src="/lovable-uploads/32fa31a6-5e5c-4b2e-905f-7a84ffa14f88.png" alt="Kotebe University of Education" className="max-w-full max-h-full object-contain" />
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-2xl font-semibold text-center mb-12 bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] bg-clip-text text-blue-800 md:text-4xl"
+          >
+            Hosted By
+          </motion.h2>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.2 }}
+            className="flex flex-col md:flex-row justify-center items-center gap-12"
+          >
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="w-48 h-48 relative flex items-center justify-center p-4 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <img
+                src="/lovable-uploads/32fa31a6-5e5c-4b2e-905f-7a84ffa14f88.png"
+                alt="Kotebe University of Education"
+                className="max-w-full max-h-full object-contain"
+              />
             </motion.div>
           </motion.div>
         </div>
@@ -154,6 +151,8 @@ Research Conference</motion.p>
 
       {/* Launch Screen Component */}
       <LaunchScreen />
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
