@@ -15,6 +15,7 @@ import AIGovernance from "./pages/events/AIGovernance";
 import DigitalPolicy from "./pages/events/DigitalPolicy";
 import Certificate from "./pages/Certificate";
 import CertificateSearch from "./pages/CertificateSearch";
+import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 import LoadingScreen from "./components/common/LoadingScreen";
 
@@ -48,6 +49,7 @@ const RoutesWithTransition = () => {
       <Route path="/events/:id" element={<EventDetails />} />
       <Route path="/certificate" element={<Certificate />} />
       <Route path="/certificate/search" element={<CertificateSearch />} />
+      <Route path="/admin" element={<Admin />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
