@@ -48,6 +48,24 @@ export const FeaturedSpeakersSection = ({
             loading="lazy"
           />
         </div>
+        <div className="flex-none w-[calc(100%-3rem)] snap-start">
+          <SpeakerCard
+            image="/lovable-uploads/4f3ee650-28c5-4aaa-acd2-60805cae3fd1.png"
+            name="Dr. Solomon Dadi"
+            title="Director of Digital Transformation"
+            role="Technology Expert"
+            loading="lazy"
+          />
+        </div>
+        <div className="flex-none w-[calc(100%-3rem)] snap-start">
+          <SpeakerCard
+            image="/lovable-uploads/af728d60-9b9b-4775-84db-f99ada2abc0b.png"
+            name="Dr. Bethlehem Alemu"
+            title="Founder, soleRebels"
+            role="Innovation Leader"
+            loading="lazy"
+          />
+        </div>
       </div>
       {showArrow && (
         <button
