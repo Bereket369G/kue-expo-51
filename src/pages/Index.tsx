@@ -89,8 +89,8 @@ Research Conference</motion.p>
             scale: 1.05
           }} onClick={() => navigate("/registration")} className="flex flex-col items-center text-center p-6 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
               <Calendar className="w-12 h-12 text-[#6DD5FA] mb-4" />
-              <h3 className="text-xl font-semibold mb-2">4-Day Event</h3>
-              <p className="text-gray-600">Comprehensive program covering leadership and technology</p>
+              <h3 className="text-xl font-semibold mb-2">2-Day Event</h3>
+              <p className="text-gray-600">Comprehensive program covering AI-Research and technology</p>
             </motion.div>
 
             <motion.div ref={ref2} style={{
