@@ -31,17 +31,6 @@ const Schedule = () => {
         </div>
       </div>
 
-      <div className="container mx-auto max-w-4xl px-6 py-8">
-        <h2 className="text-3xl font-bold text-[#1A1F7C] mb-6">Featured Speakers</h2>
-        
-        <div className="space-y-4">
-          <GuestCard image="/lovable-uploads/0ac720e3-5aee-45de-8866-44642f6feeff.png" name="Dr. Yinager Dessie" title="Governor, National Bank of Ethiopia" roles={["Economic Policy", "Finance Expert"]} />
-          <GuestCard image="/lovable-uploads/0ac8a5f3-ead5-487c-9d9f-14b501866eea.png" name="Prof. Sebsebe Demissew" title="Executive Director, Ethiopian Academy of Sciences" roles={["Research", "Innovation"]} />
-          <GuestCard image="/lovable-uploads/4f3ee650-28c5-4aaa-acd2-60805cae3fd1.png" name="Dr. Solomon Dadi" title="Director of Digital Transformation" roles={["Digital Innovation", "Technology"]} />
-          <GuestCard image="/lovable-uploads/af728d60-9b9b-4775-84db-f99ada2abc0b.png" name="Dr. Bethlehem Alemu" title="Founder, soleRebels" roles={["Entrepreneurship", "Innovation"]} />
-        </div>
-      </div>
-
       <BottomNav />
     </div>;
 };
