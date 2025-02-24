@@ -7,7 +7,8 @@ import { useEffect, useState } from "react";
 
 const Certificate = () => {
   const navigate = useNavigate();
-  const [timeLeft, setTimeLeft] = useState(30000);
+  // Changed from 30000 to 10 seconds (10000 milliseconds)
+  const [timeLeft, setTimeLeft] = useState(10000);
   const [progress, setProgress] = useState(100);
 
   useEffect(() => {
@@ -24,7 +25,8 @@ const Certificate = () => {
   }, []);
 
   useEffect(() => {
-    setProgress(timeLeft / 30000 * 100);
+    // Updated to use 10000 as base for percentage calculation
+    setProgress(timeLeft / 10000 * 100);
   }, [timeLeft]);
 
   const formatTime = (seconds: number) => {

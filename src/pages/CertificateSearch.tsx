@@ -54,17 +54,19 @@ const CertificateSearch = () => {
             >
               <div>
                 <h3 className="font-medium text-gray-900">{participant.name}</h3>
-                <p className="text-sm text-gray-500">{participant.certificate}</p>
               </div>
               <Button
                 size="sm"
-                className="bg-[#9b87f5] hover:bg-[#8b77e5]"
+                className="bg-[#9b87f5] hover:bg-[#8b77e5] relative overflow-hidden group"
                 onClick={() => {
-                  // Here you would typically trigger the certificate download
                   console.log(`Downloading certificate for ${participant.name}`);
                 }}
               >
-                <Download className="w-4 h-4" />
+                <span className="absolute inset-0 rounded-md overflow-hidden">
+                  <span className="absolute inset-0 bg-gradient-to-r from-orange-400 to-yellow-300 opacity-0 group-hover:opacity-50 animate-pulse" />
+                  <span className="absolute -inset-[100%] rotate-45 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-75 group-hover:animate-[shine_1s_ease-in-out_infinite]" />
+                </span>
+                <Download className="w-4 h-4 relative z-10" />
               </Button>
             </div>
           ))}
