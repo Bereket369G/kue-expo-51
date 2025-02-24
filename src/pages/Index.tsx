@@ -134,9 +134,7 @@ const Index = () => {
           y: 0
         }} transition={{
           duration: 0.6
-        }} className="text-2xl md:text-3xl font-semibold text-center mb-12 bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] bg-clip-text text-transparent">
-            Our Partners
-          </motion.h2>
+        }} className="text-2xl md:text-3xl font-semibold text-center mb-12 bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] bg-clip-text text-transparent">Prepared By</motion.h2>
           <motion.div initial={{
           opacity: 0,
           y: 20
@@ -147,11 +145,7 @@ const Index = () => {
           duration: 0.6,
           delay: 1.2
         }} className="flex flex-col md:flex-row justify-center items-center gap-12">
-            <motion.div whileHover={{
-            scale: 1.05
-          }} className="w-48 h-48 relative flex items-center justify-center p-4 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300">
-              <img src="/lovable-uploads/0ac8a5f3-ead5-487c-9d9f-14b501866eea.png" alt="Haile Grand" className="max-w-full max-h-full object-contain" />
-            </motion.div>
+            
             <motion.div whileHover={{
             scale: 1.05
           }} className="w-48 h-48 relative flex items-center justify-center p-4 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300">
