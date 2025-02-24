@@ -131,7 +131,7 @@ Research Conference</motion.p>
           y: 0
         }} transition={{
           duration: 0.6
-        }} className="text-2xl md:text-3xl font-semibold text-center mb-12 bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] bg-clip-text text-transparent">Prepared By</motion.h2>
+        }} className="text-2xl font-semibold text-center mb-12 bg-gradient-to-r from-[#6DD5FA] to-[#FF758C] bg-clip-text text-blue-800 md:text-4xl">Hosted By</motion.h2>
           <motion.div initial={{
           opacity: 0,
           y: 20
