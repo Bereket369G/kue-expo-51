@@ -3,7 +3,7 @@ import { ScheduleItem } from "@/components/schedule/ScheduleItem";
 import { GuestCard } from "@/components/schedule/GuestCard";
 import { BottomNav } from "@/components/schedule/BottomNav";
 const Schedule = () => {
-  return <div className="min-h-screen pb-20 bg-sky-100">
+  return <div className="min-h-screen pb-20 bg-indigo-100">
       <ScheduleHeader />
       
       <div className="container mx-auto max-w-4xl px-6 py-8">
