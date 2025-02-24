@@ -23,7 +23,7 @@ const Index = () => {
   });
   return <div className="min-h-screen bg-gradient-to-b from-[#F8F9FB] to-white">
       {/* Hero Section */}
-      <div className="relative px-6 pt-12 pb-20 md:pt-20 md:pb-32">
+      <div className="relative px-6 pt-12 pb-20 md:pt-20 md:pb-32 bg-blue-950">
         <div className="max-w-7xl mx-auto">
           <motion.h1 initial={{
           opacity: 0,
@@ -67,7 +67,7 @@ Research Conference</motion.p>
       </div>
 
       {/* Features Section */}
-      <div className="px-6 py-16 bg-white/50 backdrop-blur-lg">
+      <div className="px-6 py-16 backdrop-blur-lg bg-blue-950">
         <div className="max-w-7xl mx-auto">
           <motion.h2 initial={{
           opacity: 0,
@@ -121,7 +121,7 @@ Research Conference</motion.p>
       </div>
 
       {/* Partners Section */}
-      <div className="px-6 py-16 bg-gradient-to-b from-white/50 to-[#F8F9FB]">
+      <div className="px-6 py-16 bg-gradient-to-b from-white/50 to-[#F8F9FB] bg-blue-950">
         <div className="max-w-7xl mx-auto">
           <motion.h2 initial={{
           opacity: 0,
