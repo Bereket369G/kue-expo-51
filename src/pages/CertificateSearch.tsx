@@ -24,7 +24,7 @@ const CertificateSearch = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="sticky top-0 bg-white border-b px-4 py-3 flex items-center gap-4 z-10">
-        <button onClick={() => navigate(-1)} className="p-1.5">
+        <button onClick={() => navigate('/certificate')} className="p-1.5">
           <ArrowLeft className="w-5 h-5" />
         </button>
         <div className="flex-1 relative">

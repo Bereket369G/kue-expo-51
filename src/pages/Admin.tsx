@@ -40,6 +40,13 @@ const Admin = () => {
     return (
       <div className="min-h-screen bg-gray-50 p-8">
         <div className="mx-auto max-w-md">
+          <Button
+            variant="outline"
+            onClick={() => { window.location.href = "/" }}
+            className="mb-4"
+          >
+            Home
+          </Button>
           <h1 className="mb-8 text-3xl font-bold text-center">Admin Login</h1>
           
           <div className="rounded-lg border bg-white p-6 shadow-sm">
@@ -85,6 +92,14 @@ const Admin = () => {
     <div className="min-h-screen bg-gray-50 p-8">
       <div className="mx-auto max-w-2xl">
         <div className="mb-8 flex items-center justify-between">
+          <Button
+            variant="outline"
+            onClick={() => {
+              window.location.href = "/";
+            }}
+          >
+            Home
+          </Button>
           <h1 className="text-3xl font-bold">Admin Panel</h1>
           <Button
             variant="outline"
