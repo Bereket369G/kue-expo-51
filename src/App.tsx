@@ -22,6 +22,10 @@ import CertificateSearch from "./pages/CertificateSearch";
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 import LoadingScreen from "./components/common/LoadingScreen";
+import GreenEnergy from "./pages/showcases/GreenEnergy";
+import AIPolicy from "./pages/showcases/AIPolicy";
+import SmartCities from "./pages/showcases/SmartCities";
+import DigitalID from "./pages/showcases/DigitalID";
 
 // Create a wrapper component for the routes
 const RoutesWithTransition = () => {
@@ -55,6 +59,10 @@ const RoutesWithTransition = () => {
       <Route path="/events/digital-leadership" element={<DigitalLeadership />} />
       <Route path="/events/closing-ceremony" element={<ClosingCeremony />} />
       <Route path="/events/:id" element={<EventDetails />} />
+      <Route path="/showcases/green-energy" element={<GreenEnergy />} />
+      <Route path="/showcases/ai-policy" element={<AIPolicy />} />
+      <Route path="/showcases/smart-cities" element={<SmartCities />} />
+      <Route path="/showcases/digital-id" element={<DigitalID />} />
       <Route path="/certificate" element={<Certificate />} />
       <Route path="/certificate/search" element={<CertificateSearch />} />
       <Route path="/admin" element={<Admin />} />
