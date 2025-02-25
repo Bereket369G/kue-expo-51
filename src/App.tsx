@@ -13,6 +13,10 @@ import OpeningCeremony from "./pages/events/OpeningCeremony";
 import TechPolicy from "./pages/events/TechPolicy";
 import AIGovernance from "./pages/events/AIGovernance";
 import DigitalPolicy from "./pages/events/DigitalPolicy";
+import InnovationSummit from "./pages/events/InnovationSummit";
+import SportsTechnology from "./pages/events/SportsTechnology";
+import DigitalLeadership from "./pages/events/DigitalLeadership";
+import ClosingCeremony from "./pages/events/ClosingCeremony";
 import Certificate from "./pages/Certificate";
 import CertificateSearch from "./pages/CertificateSearch";
 import Admin from "./pages/Admin";
@@ -46,6 +50,10 @@ const RoutesWithTransition = () => {
       <Route path="/events/tech-policy" element={<TechPolicy />} />
       <Route path="/events/ai-governance" element={<AIGovernance />} />
       <Route path="/events/digital-policy" element={<DigitalPolicy />} />
+      <Route path="/events/innovation-summit" element={<InnovationSummit />} />
+      <Route path="/events/sports-technology" element={<SportsTechnology />} />
+      <Route path="/events/digital-leadership" element={<DigitalLeadership />} />
+      <Route path="/events/closing-ceremony" element={<ClosingCeremony />} />
       <Route path="/events/:id" element={<EventDetails />} />
       <Route path="/certificate" element={<Certificate />} />
       <Route path="/certificate/search" element={<CertificateSearch />} />

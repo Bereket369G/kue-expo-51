@@ -57,7 +57,7 @@ export const FeaturedSessionsSection = ({
     time: "09:30AM - 11:00AM",
     location: "Grand Hall",
     startsIn: "Starts in 1 hour",
-    route: "/events/opening-ceremony",
+    route: "/events/innovation-summit",
     typeStyle: "public" as const
   }, {
     type: "Public Session",
@@ -65,7 +65,7 @@ export const FeaturedSessionsSection = ({
     time: "01:00 PM",
     location: "Innovation Hub",
     startsIn: "Starts in 4 hours",
-    route: "/events/tech-policy",
+    route: "/events/sports-technology",
     typeStyle: "public" as const
   }, {
     type: "Restricted Access",
@@ -73,7 +73,7 @@ export const FeaturedSessionsSection = ({
     time: "03:30 PM",
     location: "Executive Suite",
     accessRequired: "VIP Access Required",
-    route: "/events/ai-governance",
+    route: "/events/digital-leadership",
     typeStyle: "restricted" as const
   }, {
     type: "Public Session",
@@ -81,7 +81,7 @@ export const FeaturedSessionsSection = ({
     time: "05:00 PM",
     location: "Main Theatre",
     startsIn: "Starts in 8 hours",
-    route: "/events/digital-policy",
+    route: "/events/closing-ceremony",
     typeStyle: "public" as const
   }];
 
